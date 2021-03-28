@@ -80,5 +80,16 @@ template<class INT> INT factorial(INT N){
     return factorial_vec[N];
 }
 
+// 累乗
+template<class INT> INT modpow(const INT a, long long n){
+    if(n==0){return 1;}
+    INT halfpow = modpow(a, n/2);
+    if(n%2==0){
+        return halfpow*halfpow;
+    }else{
+        return halfpow*halfpow*a;
+    }
+}
+
 // namespace pttmath
 }
