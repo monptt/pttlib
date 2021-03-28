@@ -3,6 +3,9 @@ using namespace std;
 #define ll long long
 
 int main(){
-    cout << pttmath::is_prime((ll)5) << endl;
+    vector<int> ls = pttmath::getPrimes(100);
+    for(int p : ls){
+        cout<<p<<endl;
+    }
     return 0;
 }

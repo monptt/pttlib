@@ -26,7 +26,7 @@ template<class INT> std::vector<INT> getPrimes(INT N){
     for(INT i=2; i<=N; i++){
         if(primeflag[i]==true){
             primes.push_back(i);
-            for(INT j=i*2; j*j<=N; j+=i){
+            for(INT j=i*2; j<=N; j+=i){
                 primeflag[j] = false;
             }
         }
