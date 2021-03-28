@@ -55,6 +55,24 @@ template<class INT> std::vector<INT> primeFactorization(INT N){
     return result;
 }
 
+// Nの約数を列挙
+// O(√N)
+template<class INT> std::vector<INT> factors(INT N){
+    std::vector<INT> factor_less;
+    std::vector<INT> factor_greater;
+    for(INT i=1; i*i<=N; i++){
+        if(N%i==0){
+            factor_less.push_back(i);
+            if(i*i!=N){
+                factor_greater.push_back(N/i);
+            }
+        }
+    }
+    std::reverse(factor_greater.begin(), factor_greater.end());
+    factor_less.insert(factor_less.end(), factor_greater.begin(), factor_greater.end());
+    return factor_less;
+}
+
 // 最大公約数
 // 互除法
 template<class INT> INT GCD(INT a, INT b){
