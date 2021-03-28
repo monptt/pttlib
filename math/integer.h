@@ -81,9 +81,9 @@ template<class INT> INT factorial(INT N){
 }
 
 // 累乗
-template<class INT> INT modpow(const INT a, long long n){
+template<class INT> INT power(const INT a, long long n){
     if(n==0){return 1;}
-    INT halfpow = modpow(a, n/2);
+    INT halfpow = power(a, n/2);
     if(n%2==0){
         return halfpow*halfpow;
     }else{
