@@ -18,3 +18,5 @@
 
 #include "math/integer.h"
 #include "math/modint.h"
+
+#include "string/string.h"
