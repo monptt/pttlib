@@ -1,4 +1,4 @@
-// 素数関連 Prime Number
+// 整数
 #include <vector>
 #include <queue>
 namespace pttmath{

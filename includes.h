@@ -16,4 +16,4 @@
 #include <complex>
 #include <numeric>
 
-#include "math/prime.h"
+#include "math/integer.h"
