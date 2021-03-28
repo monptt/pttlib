@@ -1,5 +1,5 @@
 *.exe
 submission.cpp
+main
 main.cpp
 includes.h
-
