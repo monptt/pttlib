@@ -1,11 +1,12 @@
 // 整数
 #include <vector>
-#include <queue>
+#include <utility>
+
 namespace pttmath{
 
 // 素数判定
 // O(√N)
-template<class INT> bool is_prime(INT N){
+template<class INT> bool isPrime(INT N){
     for(INT i=2; i*i<=N; i++){
         if(N%i==0){
             return false;
@@ -14,15 +15,13 @@ template<class INT> bool is_prime(INT N){
     return true;
 }
 
-// n以下の素数の列挙
+// N以下の素数の列挙
 // エラトステネスの篩
 // O(NloglogN)
 template<class INT> std::vector<INT> getPrimes(INT N){
     std::vector<INT> primes; // 素数を格納してゆく
 
     std::vector<bool> primeflag(N+1, true);
-    primeflag[0] = false;
-    primeflag[1] = false;
     for(INT i=2; i<=N; i++){
         if(primeflag[i]==true){
             primes.push_back(i);
@@ -34,4 +33,27 @@ template<class INT> std::vector<INT> getPrimes(INT N){
     return primes;
 }
 
+// Nの素因数分解
+template<class INT> std::vector<INT> primeFactorization(INT N){
+    std::vector<INT> min_prime_factor(N+1, -1);  // 最小の素因数
+    for(INT i=2; i<=N; i++){
+        if(min_prime_factor[i]!=-1){
+            continue;
+        }
+        for(INT j=i; j<=N; j+=i){
+            if(min_prime_factor[j]==-1){   
+                min_prime_factor[j] = i;
+            }
+        }
+    }
+
+    std::vector<INT> result;
+    while(N>1){
+        result.push_back(min_prime_factor[N]);
+        N /= min_prime_factor[N];
+    }
+    return result;
+}
+
+// namespace pttmath
 }
