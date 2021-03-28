@@ -17,7 +17,7 @@ def embed(code):
                 pass    # 埋め込み済み
             else:
                 included.append(headerfile)
-                with open(headerfile, "r") as h:
+                with open(headerfile, "r", encoding="utf-8") as h:
                     h_content = h.read()
                     h_content = embed(h_content)
                     newcode += h_content
