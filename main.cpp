@@ -1,10 +1,9 @@
 #include "includes.h"
 using namespace std;
-#define ll long long
 
 int main(){
-    vector<int> ls = pttmath::getPrimes(100);
-    for(int p : ls){
+    vector<int> primes = pttmath::getPrimes(100);
+    for(int p : primes){
         cout<<p<<endl;
     }
     return 0;
