@@ -69,5 +69,16 @@ template<class INT> INT GCD(INT a, INT b){
 template<class INT> INT LCM(INT a, INT b){
     return a/GCD(a,b)*b;
 }
+
+// 階乗
+template<class INT> INT factorial(INT N){
+    static std::vector<INT> factorial_vec(1, 1);
+
+    for(INT i=factorial_vec.size(); i<=N; i++){
+        factorial_vec.push_back(factorial_vec[i-1]*i);
+    }
+    return factorial_vec[N];
+}
+
 // namespace pttmath
 }
