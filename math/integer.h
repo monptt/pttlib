@@ -55,5 +55,19 @@ template<class INT> std::vector<INT> primeFactorization(INT N){
     return result;
 }
 
+// 最大公約数
+// 互除法
+template<class INT> INT GCD(INT a, INT b){
+    if(b==0){
+        return a;
+    }else{
+        return GCD(b, a%b);
+    }
+}
+
+// 最小公倍数
+template<class INT> INT LCM(INT a, INT b){
+    return a/GCD(a,b)*b;
+}
 // namespace pttmath
 }
