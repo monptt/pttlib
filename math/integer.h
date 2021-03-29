@@ -35,17 +35,22 @@ template<class INT> std::vector<INT> getPrimes(INT N){
 
 // Nの素因数分解
 template<class INT> std::vector<INT> primeFactorization(INT N){
-    std::vector<INT> min_prime_factor(N+1, -1);  // 最小の素因数
-    for(INT i=2; i<=N; i++){
-        if(min_prime_factor[i]!=-1){
-            continue;
-        }
-        for(INT j=i; j<=N; j+=i){
-            if(min_prime_factor[j]==-1){   
-                min_prime_factor[j] = i;
+    INT maxN = 1000000;
+    static std::vector<INT> min_prime_factor(maxN+1, -1);  // 最小の素因数
+    // 初回だけmaxNまで計算する
+    if(min_prime_factor[2]==-1){
+        for(INT i=2; i<=N; i++){
+            if(min_prime_factor[i]!=-1){
+                continue;
             }
-        }
+            for(INT j=i; j<=N; j+=i){
+                if(min_prime_factor[j]==-1){   
+                    min_prime_factor[j] = i;
+                }
+            }
+        }        
     }
+
 
     std::vector<INT> result;
     while(N>1){
