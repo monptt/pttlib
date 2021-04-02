@@ -114,5 +114,15 @@ template<class INT> INT power(const INT a, long long n){
     }
 }
 
+// 桁数
+template<class INT> int digit(INT N, int base=10){
+    INT d = 0;
+    while(N>0){
+        N/=base;
+        d++;
+    }
+    return d;
+}
+
 // namespace pttmath
 }

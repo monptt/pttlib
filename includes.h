@@ -18,5 +18,13 @@
 
 #include "math/integer.h"
 #include "math/modint.h"
+#include "math/polynomial.h"
+#include "math/fft.h"
+
+#include "geometry/geometry.h"
 
 #include "string/string.h"
+
+#include "graph/graph.h"
+
+const double PI = acos(-1);
