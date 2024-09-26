@@ -133,6 +133,9 @@
     <ClInclude Include="lib\Algebra\Pair.h" />
     <ClInclude Include="lib\Class.h" />
     <ClInclude Include="lib\Algebra\Mapping.h" />
+    <ClInclude Include="lib\LinearAlgebra\Vector.h" />
+    <ClInclude Include="lib\LinearAlgebra\Vector2.h" />
+    <ClInclude Include="lib\LinearAlgebra\Vector3.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="lib\Algebra\Semigroup.h" />
     <ClInclude Include="lib\Algebra\Ring.h" />
@@ -145,6 +148,9 @@
     <ClCompile Include="lib\Algebra\Group.cpp" />
     <ClCompile Include="lib\Class.cpp" />
     <ClCompile Include="lib\Algebra\Magma.cpp" />
+    <ClCompile Include="lib\LinearAlgebra\Vector.cpp" />
+    <ClCompile Include="lib\LinearAlgebra\Vector2.cpp" />
+    <ClCompile Include="lib\LinearAlgebra\Vector3.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="lib\Algebra\Semigroup.cpp" />
     <ClCompile Include="lib\Algebra\Mapping.cpp" />
