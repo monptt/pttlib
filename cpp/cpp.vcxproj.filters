@@ -36,6 +36,12 @@
     <ClInclude Include="lib\Algebra\Mapping.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="lib\Algebra\Ring.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Algebra\Pair.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="cpp.rc">
@@ -62,6 +68,12 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="lib\Algebra\Mapping.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Algebra\Ring.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Algebra\Pair.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

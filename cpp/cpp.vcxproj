@@ -130,10 +130,12 @@
     <ClInclude Include="lib\Algebra\BinaryOperation.h" />
     <ClInclude Include="lib\Algebra\Group.h" />
     <ClInclude Include="lib\Algebra\Magma.h" />
+    <ClInclude Include="lib\Algebra\Pair.h" />
     <ClInclude Include="lib\Class.h" />
     <ClInclude Include="lib\Algebra\Mapping.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="lib\Algebra\Semigroup.h" />
+    <ClInclude Include="lib\Algebra\Ring.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="cpp.rc" />
@@ -146,6 +148,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="lib\Algebra\Semigroup.cpp" />
     <ClCompile Include="lib\Algebra\Mapping.cpp" />
+    <ClCompile Include="lib\Algebra\Ring.cpp" />
+    <ClCompile Include="lib\Algebra\Pair.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,5 +4,5 @@
 class Group :
     public Semigroup
 {
+    virtual Group Inverse() = 0;
 };
-
