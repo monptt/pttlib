@@ -6,4 +6,3 @@ public:
 	Class() {};
 	virtual ~Class() {};
 };
-
