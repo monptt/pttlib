@@ -136,6 +136,11 @@
     <ClInclude Include="lib\LinearAlgebra\Vector.h" />
     <ClInclude Include="lib\LinearAlgebra\Vector2.h" />
     <ClInclude Include="lib\LinearAlgebra\Vector3.h" />
+    <ClInclude Include="lib\Number\ComplexNumber.h" />
+    <ClInclude Include="lib\Number\Integer.h" />
+    <ClInclude Include="lib\Number\NaturalNumber.h" />
+    <ClInclude Include="lib\Number\RationalNumber.h" />
+    <ClInclude Include="lib\Number\RealNumber.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="lib\Algebra\Semigroup.h" />
     <ClInclude Include="lib\Algebra\Ring.h" />
@@ -151,6 +156,11 @@
     <ClCompile Include="lib\LinearAlgebra\Vector.cpp" />
     <ClCompile Include="lib\LinearAlgebra\Vector2.cpp" />
     <ClCompile Include="lib\LinearAlgebra\Vector3.cpp" />
+    <ClCompile Include="lib\Number\ComplexNumber.cpp" />
+    <ClCompile Include="lib\Number\Integer.cpp" />
+    <ClCompile Include="lib\Number\NaturalNumber.cpp" />
+    <ClCompile Include="lib\Number\RationalNumber.cpp" />
+    <ClCompile Include="lib\Number\RealNumber.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="lib\Algebra\Semigroup.cpp" />
     <ClCompile Include="lib\Algebra\Mapping.cpp" />
