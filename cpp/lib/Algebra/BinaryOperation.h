@@ -1,11 +1,11 @@
 #pragma once
 #include "Mapping.h"
 
-template <typename T>
-class BinaryOperation : Mapping
+template <typename Domain>
+class BinaryOperation : Mapping<Domain, Domain>
 {
 public:
-	BinaryOperation(T(*func)(T,T)) {};
+	BinaryOperation(Domain(*func)(Domain, Domain)) {};
 
 	// ‰ÂŠ·‚©
 	virtual bool IsCommutative() = 0;
