@@ -134,6 +134,7 @@
     <ClInclude Include="lib\Class.h" />
     <ClInclude Include="lib\Algebra\Mapping.h" />
     <ClInclude Include="lib\Geometry\Line.h" />
+    <ClInclude Include="lib\Graph\Graph.h" />
     <ClInclude Include="lib\LinearAlgebra\Vector.h" />
     <ClInclude Include="lib\LinearAlgebra\Vector2.h" />
     <ClInclude Include="lib\LinearAlgebra\Vector3.h" />
@@ -142,6 +143,7 @@
     <ClInclude Include="lib\Number\NaturalNumber.h" />
     <ClInclude Include="lib\Number\RationalNumber.h" />
     <ClInclude Include="lib\Number\RealNumber.h" />
+    <ClInclude Include="lib\Set\Set.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="lib\Algebra\Semigroup.h" />
     <ClInclude Include="lib\Algebra\Ring.h" />
@@ -155,6 +157,7 @@
     <ClCompile Include="lib\Class.cpp" />
     <ClCompile Include="lib\Algebra\Magma.cpp" />
     <ClCompile Include="lib\Geometry\Line.cpp" />
+    <ClCompile Include="lib\Graph\Graph.cpp" />
     <ClCompile Include="lib\LinearAlgebra\Vector.cpp" />
     <ClCompile Include="lib\LinearAlgebra\Vector2.cpp" />
     <ClCompile Include="lib\LinearAlgebra\Vector3.cpp" />
@@ -163,6 +166,7 @@
     <ClCompile Include="lib\Number\NaturalNumber.cpp" />
     <ClCompile Include="lib\Number\RationalNumber.cpp" />
     <ClCompile Include="lib\Number\RealNumber.cpp" />
+    <ClCompile Include="lib\Set\Set.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="lib\Algebra\Semigroup.cpp" />
     <ClCompile Include="lib\Algebra\Mapping.cpp" />
