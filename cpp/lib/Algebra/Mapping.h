@@ -21,8 +21,25 @@ public:
 		return mapping(x);
 	};
 
+	// 写像の合成（引き戻し）
+	template<class PullbackDomain>
+	Mapping<PullbackDomain, Codomain> operator*(const Mapping<PullbackDomain, Domain>& pullbackMapping) const {
+		return this->Compose(pullbackMapping);
+	};
+
 private:
-	// 関数ポインタとして実装
+	// 写像を関数ポインタとして実装
 	Codomain(*mapping)(Domain);
+
+	// 写像の合成（引き戻し）
+	template<class PullbackDomain>
+	Mapping<PullbackDomain, Codomain> Compose(Mapping<PullbackDomain, Domain> pullbackMapping) {
+		Mapping<PullbackDomain, Domain> composition = Mapping<PullbackDomain, Domain>(
+			[](Domain x) {
+				return this->Map(pullbackMapping.Map(x));
+			}
+		);
+		return composition;
+	};
 };
 
