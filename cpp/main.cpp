@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "lib/Algebra/Magma.h"
+#include "lib/Algebra/Mapping.h"
 
 int main(int argc, char* argv[]) {
 	std::cout << "Hello, World!" << std::endl;
