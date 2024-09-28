@@ -10,6 +10,8 @@ public:
 	RealNumber(const RealNumber& obj) { this->value = obj.value; };
 	RealNumber(float value);
 
+	RealNumber operator+(const RealNumber& other) const;
+
 	std::string ToString() const;
 private:
 	float value;

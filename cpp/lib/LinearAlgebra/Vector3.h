@@ -3,15 +3,17 @@
 #include "../Number/RealNumber.h"
 
 class Vector3 :
-    public Vector
+    public Vector<3>
 {
 public:
     Vector3(RealNumber x, RealNumber y, RealNumber z);
+    Vector3 operator +(const Vector3& other) const;
 
     std::string ToString() const;
+    
 
-    RealNumber x;
-    RealNumber y;
-    RealNumber z;
+    RealNumber& x = values[0];
+    RealNumber& y = values[1];
+    RealNumber& z = values[2];
 };
 
