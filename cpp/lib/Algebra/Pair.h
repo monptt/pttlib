@@ -1,14 +1,17 @@
 #pragma once
 #include "../Class.h"
 
-
+template<class A, class B>
 class Pair :
 	public Class
 {
 public:
-	Pair(Class a, Class b) : first(a), second(b) {}
+	Pair(A a, B b) : first(a), second(b) {
+		this->first = a;
+		this->second = b;
+	}
 
 private:
-	Class first;
-	Class second;
+	A first;
+	B second;
 };

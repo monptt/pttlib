@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "lib/Algebra/Polynomial.h"
+#include "lib/Algebra/Pair.h"
 
 int main(int argc, char* argv[]) {
 	std::cout << "Hello, World!" << std::endl;
