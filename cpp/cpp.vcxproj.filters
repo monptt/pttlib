@@ -75,6 +75,9 @@
     <ClInclude Include="lib\Set\Set.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="lib\DataStructure\Bitset.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="cpp.rc">
@@ -140,6 +143,9 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="lib\Set\Set.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\DataStructure\Bitset.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
