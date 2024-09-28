@@ -11,6 +11,7 @@ public:
 
     std::string ToString() const;
     
+    static Vector3 Cross(const Vector3& a, const Vector3& b);
 
     RealNumber& x = values[0];
     RealNumber& y = values[1];

@@ -11,6 +11,8 @@ public:
 	RealNumber(float value);
 
 	RealNumber operator+(const RealNumber& other) const;
+	RealNumber operator-(const RealNumber& other) const;
+	RealNumber operator*(const RealNumber& other) const;
 
 	std::string ToString() const;
 private:

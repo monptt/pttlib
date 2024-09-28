@@ -14,6 +14,6 @@ int main(int argc, char* argv[]) {
 	Vector3 v2 = Vector3(1, 2, 3);
 	std::cout << v1.ToString() << std::endl;
 	std::cout << v2.ToString() << std::endl;
-	std::cout << (v1 + v2).ToString() << std::endl;
+	std::cout << Vector3::Cross(v1, v2).ToString() << std::endl;
 	return 0;
 }
