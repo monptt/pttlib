@@ -3,6 +3,7 @@
 #include "lib/Algebra/Polynomial.h"
 #include "lib/Algebra/Pair.h"
 #include "lib/LinearAlgebra/Vector3.h"
+#include "lib/Number/ComplexNumber.h"
 
 int main(int argc, char* argv[]) {
 	std::cout << "Hello, World!" << std::endl;
@@ -15,5 +16,8 @@ int main(int argc, char* argv[]) {
 	std::cout << v1.ToString() << std::endl;
 	std::cout << v2.ToString() << std::endl;
 	std::cout << Vector3::Cross(v1, v2).ToString() << std::endl;
+
+	ComplexNumber c = ComplexNumber(1, 2);
+	std::cout << c.ToString() << std::endl;
 	return 0;
 }
