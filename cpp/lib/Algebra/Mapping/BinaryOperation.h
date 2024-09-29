@@ -2,6 +2,10 @@
 #include "Mapping.h"
 #include "../Pair.h"
 
+/// <summary>
+/// “ñ€‰‰Z
+/// </summary>
+/// <typeparam name="Domain"></typeparam>
 template <typename Domain>
 class BinaryOperation : Mapping<Domain, Domain>
 {
@@ -11,10 +15,4 @@ public:
 	Domain operator()(Domain x, Domain y) {
 		return mapping(Pair<Domain, Domain>(x, y));
 	};
-
-	// ‰ÂŠ·‚©
-	virtual bool IsCommutative() = 0;
-
-	// Œ‹‡“I‚©
-	virtual bool IsAssociative() = 0;
 };

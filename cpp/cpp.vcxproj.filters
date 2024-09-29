@@ -87,6 +87,9 @@
     <ClInclude Include="lib\Algebra\Field.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="lib\Algebra\Monoid.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="cpp.rc">
@@ -164,6 +167,9 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="lib\Algebra\Field.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Algebra\Monoid.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

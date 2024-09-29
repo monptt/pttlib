@@ -1,8 +1,17 @@
 #pragma once
-#include "Semigroup.h"
+#include "Monoid.h"
+#include "Mapping/BinaryOperation.h"
 
+/// <summary>
+/// ŒQ
+/// </summary>
 class Group :
-    public Semigroup
+	public Monoid
 {
-    virtual Group Inverse() = 0;
+public:
+	/// <summary>
+	///  ‹tŒ³
+	/// </summary>
+	/// <returns></returns>
+	virtual Group GetInverse() const = 0;
 };
