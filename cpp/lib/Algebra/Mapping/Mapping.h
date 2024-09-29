@@ -1,6 +1,9 @@
 #pragma once
 #include "../../Class.h"
 
+template<class Domain>
+class IdentityMapping;
+
 /// <summary>
 /// 写像
 /// </summary>
@@ -13,9 +16,21 @@ class Mapping :
 public:
 	virtual ~Mapping() {};
 
-	Mapping(Codomain(*mapping)(Domain)) {
-		this->mapping = mapping;
-	};
+	/// <summary>
+	/// コンストラクタ
+	/// </summary>
+	/// <param name="mapping">写像の実装</param>
+	Mapping(Codomain(*mapping)(Domain))
+		: mapping(mapping) {};
+
+	/// <summary>
+	/// コンストラクタ（逆写像を同時に定義）
+	/// </summary>
+	/// <param name="mapping">写像</param>
+	/// <param name="inverse">逆写像</param>
+	Mapping(Codomain(*mapping)(Domain), Domain(*inverse)(Codomain))
+		: mapping(mapping), inverse(inverse) {};
+
 
 	Codomain operator()(Domain x) {
 		return mapping(x);
@@ -41,12 +56,18 @@ protected:
 	// 写像の合成（引き戻し）
 	template<class PullbackDomain>
 	Mapping<PullbackDomain, Codomain> Compose(Mapping<PullbackDomain, Domain> pullbackMapping) {
-		Mapping<PullbackDomain, Domain> composition = Mapping<PullbackDomain, Domain>(
-			[](Domain x) {
-				return this->Map(pullbackMapping.Map(x));
-			}
-		);
-		return composition;
+		if (pullbackMapping.inverse == this) {
+			return IdentityMapping<PullbackDomain>();
+		}
+		else {
+			Mapping<PullbackDomain, Domain> composition = Mapping<PullbackDomain, Domain>(
+				[](Domain x) {
+					return this->Map(pullbackMapping.Map(x));
+				}
+			);
+			return composition;
+		}
+
 	};
 };
 

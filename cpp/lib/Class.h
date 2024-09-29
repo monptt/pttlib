@@ -1,10 +1,6 @@
 #pragma once
 #include <string>
 
-#ifndef VARNAME(x)
-#define VARNAME(x) #x
-#endif
-
 class Class
 {
 public:

@@ -1,6 +1,8 @@
 #pragma once
 #include "Mapping.h"
 
+template<class Domain, class Codomain> class Mapping;
+
 /// <summary>
 /// P“™Ê‘œ
 /// </summary>
@@ -13,7 +15,7 @@ public:
 	IdentityMapping() : Mapping<Domain, Domain>(
 		[](Domain x) {
 			return x;
-		}
-	) {};
+		},
+		this->mapping)
+	{};
 };
-
