@@ -6,11 +6,8 @@
 #include "lib/Number/ComplexNumber.h"
 
 int main(int argc, char* argv[]) {
-	ComplexNumber c1 = 1;
-	ComplexNumber c2 = 2;
-	std::cout << (c1 + c2).ToString() << std::endl;
-	std::cout << (c1 - c2).ToString() << std::endl;
-	std::cout << (c1 * c2).ToString() << std::endl;
-	std::cout << (c1 / c2).ToString() << std::endl;
+	Vector3 v1(1, 2, 3);
+	Vector3 v2(3, 2, 1);
+	std::cout << Vector3::Dot(v1, v2).ToString() << std::endl;
 	return 0;
 }

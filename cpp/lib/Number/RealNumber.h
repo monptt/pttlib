@@ -17,7 +17,10 @@ public:
 	RealNumber operator*(const RealNumber& other) const;
 	RealNumber operator/(const RealNumber& other) const;
 
+	RealNumber& operator+=(const RealNumber& other);
+
 	std::string ToString() const;
+
 private:
 	float value;
 

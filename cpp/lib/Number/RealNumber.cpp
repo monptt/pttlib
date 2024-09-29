@@ -35,6 +35,12 @@ RealNumber RealNumber::operator/(const RealNumber& other) const
 	return this->value / other.value;
 }
 
+RealNumber& RealNumber::operator+=(const RealNumber& other)
+{
+	this->value = this->value + other.value;
+	return *this;
+}
+
 std::string RealNumber::ToString() const
 {
 	return std::to_string(this->value);
