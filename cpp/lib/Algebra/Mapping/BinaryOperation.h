@@ -7,12 +7,14 @@
 /// </summary>
 /// <typeparam name="Domain"></typeparam>
 template <typename Domain>
-class BinaryOperation : Mapping<Domain, Domain>
+class BinaryOperation : public Mapping<Pair<Domain, Domain>, Domain>
 {
 public:
-	BinaryOperation(Domain(*func)(Domain, Domain)) {};
+	BinaryOperation(Domain(*func)(Domain, Domain))
+		: Mapping<Pair<Domain, Domain>, Domain>(func)
+	{};
 
 	Domain operator()(Domain x, Domain y) {
-		return mapping(Pair<Domain, Domain>(x, y));
+		return this->mapping(Pair<Domain, Domain>(x, y));
 	};
 };

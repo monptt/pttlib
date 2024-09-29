@@ -1,11 +1,21 @@
 #pragma once
-#include "../Class.h"
+#include "Ring.h"
 
 /// <summary>
 /// ëÃ
 /// </summary>
 class Field :
-    public Class
+	public Ring
 {
+public:
+	Field operator/ (const Field& rhs) {
+		return division(*this, rhs);
+	}
+
+private:
+	/// <summary>
+	/// èúñ@
+	/// </summary>
+	BinaryOperation<Field> division;
 };
 
