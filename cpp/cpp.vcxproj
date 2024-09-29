@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="lib\Algebra\AbelianGroup.h" />
     <ClInclude Include="lib\Algebra\Field.h" />
     <ClInclude Include="lib\Algebra\Mapping\BinaryOperation.h" />
     <ClInclude Include="lib\Algebra\Group.h" />
@@ -157,6 +158,7 @@
     <ResourceCompile Include="cpp.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="lib\Algebra\AbelianGroup.cpp" />
     <ClCompile Include="lib\Algebra\Field.cpp" />
     <ClCompile Include="lib\Algebra\Mapping\BinaryOperation.cpp" />
     <ClCompile Include="lib\Algebra\Group.cpp" />
