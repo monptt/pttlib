@@ -17,6 +17,10 @@ public:
 		this->mapping = mapping;
 	};
 
+	Codomain operator()(Domain x) {
+		return mapping(x);
+	};
+
 	Codomain Map(Domain x) {
 		return mapping(x);
 	};
@@ -27,9 +31,12 @@ public:
 		return this->Compose(pullbackMapping);
 	};
 
-private:
+protected:
 	// 写像を関数ポインタとして実装
 	Codomain(*mapping)(Domain);
+
+	// 逆写像
+	Mapping<Codomain, Domain>* inverse;
 
 	// 写像の合成（引き戻し）
 	template<class PullbackDomain>
