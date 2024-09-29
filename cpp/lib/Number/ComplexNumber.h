@@ -8,6 +8,8 @@ class ComplexNumber :
 {
 public:
 	ComplexNumber(RealNumber a, RealNumber b);
+	ComplexNumber(RealNumber x);
+	ComplexNumber(int x);
 	std::string ToString() const;
 
 	ComplexNumber operator+(const ComplexNumber& other) const;

@@ -5,6 +5,17 @@ ComplexNumber::ComplexNumber(RealNumber a, RealNumber b) :
 {
 }
 
+ComplexNumber::ComplexNumber(RealNumber x)
+	:ComplexNumber(x, 0)
+{
+}
+
+ComplexNumber::ComplexNumber(int x)
+	:ComplexNumber(x, 0)
+{
+
+}
+
 std::string ComplexNumber::ToString() const
 {
 	std::string str = "";
@@ -60,8 +71,8 @@ ComplexNumber ComplexNumber::Mul(ComplexNumber x, ComplexNumber y)
 
 ComplexNumber ComplexNumber::Div(ComplexNumber x, ComplexNumber y)
 {
-	RealNumber re = (Re(x) * Re(y) + Im(x) * Im(y)) / Abs(y);
-	RealNumber im = (Im(x) * Re(y) - Re(x) * Im(y)) / Abs(y);
+	RealNumber re = (Re(x) * Re(y) + Im(x) * Im(y)) / (Re(y) * Re(y) + Im(y) * Im(y));
+	RealNumber im = (Im(x) * Re(y) - Re(x) * Im(y)) / (Re(y) * Re(y) + Im(y) * Im(y));
 	return ComplexNumber(re, im);
 }
 
