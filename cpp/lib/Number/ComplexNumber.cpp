@@ -13,6 +13,26 @@ std::string ComplexNumber::ToString() const
 	return str;
 }
 
+ComplexNumber ComplexNumber::operator+(const ComplexNumber& other) const
+{
+	return Add(*this, other);
+}
+
+ComplexNumber ComplexNumber::operator-(const ComplexNumber& other) const
+{
+	return Sub(*this, other);
+}
+
+ComplexNumber ComplexNumber::operator*(const ComplexNumber& other) const
+{
+	return Mul(*this, other);
+}
+
+ComplexNumber ComplexNumber::operator/(const ComplexNumber& other) const
+{
+	return Div(*this, other);
+}
+
 RealNumber ComplexNumber::Re(ComplexNumber x)
 {
 	return x.first;
@@ -21,4 +41,31 @@ RealNumber ComplexNumber::Re(ComplexNumber x)
 RealNumber ComplexNumber::Im(ComplexNumber x)
 {
 	return x.second;
+}
+
+ComplexNumber ComplexNumber::Add(ComplexNumber x, ComplexNumber y)
+{
+	return ComplexNumber(Re(x) + Re(y), Im(x) + Im(y));
+}
+
+ComplexNumber ComplexNumber::Sub(ComplexNumber x, ComplexNumber y)
+{
+	return ComplexNumber(Re(x) - Re(y), Im(x) - Im(y));
+}
+
+ComplexNumber ComplexNumber::Mul(ComplexNumber x, ComplexNumber y)
+{
+	return ComplexNumber(Re(x) * Re(y) - Im(x) * Im(y), Re(x) * Im(y) + Im(x) * Re(y));
+}
+
+ComplexNumber ComplexNumber::Div(ComplexNumber x, ComplexNumber y)
+{
+	RealNumber re = (Re(x) * Re(y) + Im(x) * Im(y)) / Abs(y);
+	RealNumber im = (Im(x) * Re(y) - Re(x) * Im(y)) / Abs(y);
+	return ComplexNumber(re, im);
+}
+
+RealNumber ComplexNumber::Abs(ComplexNumber x)
+{
+	return RealNumber::Sqrt(Re(x) * Re(x) + Im(x) * Im(x));
 }

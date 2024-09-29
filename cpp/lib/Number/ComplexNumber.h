@@ -10,6 +10,11 @@ public:
 	ComplexNumber(RealNumber a, RealNumber b);
 	std::string ToString() const;
 
+	ComplexNumber operator+(const ComplexNumber& other) const;
+	ComplexNumber operator-(const ComplexNumber& other) const;
+	ComplexNumber operator*(const ComplexNumber& other) const;
+	ComplexNumber operator/(const ComplexNumber& other) const;
+
 private:
 	RealNumber& realPart{ this->first };
 	RealNumber& imaginaryPart{ this->second };
@@ -17,5 +22,13 @@ private:
 public:
 	static RealNumber Re(ComplexNumber x);
 	static RealNumber Im(ComplexNumber x);
+
+private:
+	static ComplexNumber Add(const ComplexNumber x, ComplexNumber y);
+	static ComplexNumber Sub(ComplexNumber x, ComplexNumber y);
+	static ComplexNumber Mul(ComplexNumber x, ComplexNumber y);
+	static ComplexNumber Div(ComplexNumber x, ComplexNumber y);
+
+	static RealNumber Abs(ComplexNumber x);
 };
 
