@@ -1,6 +1,6 @@
 #pragma once
 #include "Mapping.h"
-#include "Pair.h"
+#include "../Pair.h"
 
 template <typename Domain>
 class BinaryOperation : Mapping<Domain, Domain>

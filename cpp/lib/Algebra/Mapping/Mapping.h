@@ -1,5 +1,5 @@
 #pragma once
-#include "../Class.h"
+#include "../../Class.h"
 
 /// <summary>
 /// ŽÊ‘œ

@@ -30,10 +30,10 @@
     <ClInclude Include="lib\Algebra\Semigroup.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="lib\Algebra\BinaryOperation.h">
+    <ClInclude Include="lib\Algebra\Mapping\BinaryOperation.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="lib\Algebra\Mapping.h">
+    <ClInclude Include="lib\Algebra\Mapping\Mapping.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="lib\Algebra\Ring.h">
@@ -81,6 +81,9 @@
     <ClInclude Include="lib\Algebra\Polynomial.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="lib\Algebra\Mapping\IdentityMapping.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="cpp.rc">
@@ -103,10 +106,10 @@
     <ClCompile Include="lib\Algebra\Semigroup.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="lib\Algebra\BinaryOperation.cpp">
+    <ClCompile Include="lib\Algebra\Mapping\BinaryOperation.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="lib\Algebra\Mapping.cpp">
+    <ClCompile Include="lib\Algebra\Mapping\Mapping.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="lib\Algebra\Ring.cpp">
@@ -152,6 +155,9 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="lib\Algebra\Polynomial.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Algebra\Mapping\IdentityMapping.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
