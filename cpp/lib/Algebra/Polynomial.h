@@ -1,5 +1,6 @@
 #pragma once
-#include "../Class.h"
+#include "Mapping/Mapping.h"
+#include "../Number/RealNumber.h"
 #include <initializer_list>
 #include <string>
 
@@ -7,14 +8,14 @@
 /// ‘½€®
 /// </summary>
 class Polynomial :
-    public Class
+	public Mapping<RealNumber, RealNumber>
 {
 public:
-    Polynomial(std::initializer_list<float> list);
+	Polynomial(std::initializer_list<float> list);
 
-    std::string ToString() const;
+	std::string ToString() const;
 
 private:
-    std::initializer_list<float> coefficients;
+	std::initializer_list<float> coefficients;
 };
 
