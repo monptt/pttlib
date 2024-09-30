@@ -17,26 +17,26 @@ public:
 	virtual ~Mapping() {};
 
 	Codomain operator()(Domain x) {
-		return mapping(x);
+		return Map(x);
 	};
 
+	// 写像の合成（引き戻し）
+	template<class PullbackDomain>
+	Mapping<PullbackDomain, Codomain>* operator*(const Mapping<PullbackDomain, Domain>& pullbackMapping) const {
+		return this->Compose(pullbackMapping);
+	};
+
+protected:
 	/// <summary>
 	/// 写像の実装
 	/// </summary>
 	/// <param name="x">引数</param>
 	/// <returns></returns>
-	virtual Codomain Map(Domain x) = 0;
+	virtual Codomain Map(Domain x) const = 0;
 
 	// 写像の合成（引き戻し）
 	template<class PullbackDomain>
-	Mapping<PullbackDomain, Codomain> operator*(const Mapping<PullbackDomain, Domain>& pullbackMapping) const {
-		return this->Compose(pullbackMapping);
-	};
-
-protected:
-	// 写像の合成（引き戻し）
-	template<class PullbackDomain>
-	Mapping<PullbackDomain, Codomain> Compose(Mapping<PullbackDomain, Domain> pullbackMapping) {
+	Mapping<PullbackDomain, Codomain>* Compose(Mapping<PullbackDomain, Domain> pullbackMapping) {
 		if (pullbackMapping.inverse == this) {
 			return IdentityMapping<PullbackDomain>();
 		}

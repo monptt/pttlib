@@ -15,6 +15,9 @@ public:
 
 	std::string ToString() const;
 
+protected:
+	RealNumber Map(RealNumber x) const override;
+
 private:
 	std::initializer_list<float> coefficients;
 };

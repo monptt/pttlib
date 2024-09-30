@@ -6,8 +6,9 @@
 #include "lib/Number/ComplexNumber.h"
 
 int main(int argc, char* argv[]) {
-	Vector3 v1(1, 2, 3);
-	Vector3 v2(3, 2, 1);
-	std::cout << Vector3::Dot(v1, v2).ToString() << std::endl;
+	Polynomial p1 = { 1, 2, 3 };
+	Polynomial p2 = { 4, 5, 6 };
+	std::cout << p1.ToString() << std::endl;
+	std::cout << p2.ToString() << std::endl;
 	return 0;
 }
