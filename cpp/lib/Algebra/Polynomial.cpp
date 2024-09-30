@@ -27,7 +27,7 @@ RealNumber Polynomial::Map(RealNumber x) const
 {
 	RealNumber ret = 0;
 	for (int i = 0; i < coefficients.size(); ++i) {
-		ret += RealNumber::Power(x, i);
+		ret += RealNumber(coefficients.begin()[i]) * RealNumber::Power(x, i);
 	}
 	return ret;
 }
