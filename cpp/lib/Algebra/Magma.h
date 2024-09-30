@@ -8,6 +8,5 @@ class Magma : public Class
 	virtual Magma operator*(const Magma& rhs) const = 0;
 
 private:
-	// “ñ€‰‰Z
-	const BinaryOperation<Magma> operation;
+
 };

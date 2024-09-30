@@ -16,29 +16,16 @@ class Mapping :
 public:
 	virtual ~Mapping() {};
 
-	/// <summary>
-	/// コンストラクタ
-	/// </summary>
-	/// <param name="mapping">写像の実装</param>
-	Mapping(Codomain(*mapping)(Domain))
-		: mapping(mapping) {};
-
-	/// <summary>
-	/// コンストラクタ（逆写像を同時に定義）
-	/// </summary>
-	/// <param name="mapping">写像</param>
-	/// <param name="inverse">逆写像</param>
-	Mapping(Codomain(*mapping)(Domain), Domain(*inverse)(Codomain))
-		: mapping(mapping), inverse(inverse) {};
-
-
 	Codomain operator()(Domain x) {
 		return mapping(x);
 	};
 
-	Codomain Map(Domain x) {
-		return mapping(x);
-	};
+	/// <summary>
+	/// 写像の実装
+	/// </summary>
+	/// <param name="x">引数</param>
+	/// <returns></returns>
+	virtual Codomain Map(Domain x) = 0;
 
 	// 写像の合成（引き戻し）
 	template<class PullbackDomain>
@@ -47,12 +34,6 @@ public:
 	};
 
 protected:
-	// 写像を関数ポインタとして実装
-	Codomain(*mapping)(Domain);
-
-	// 逆写像
-	Mapping<Codomain, Domain>* inverse;
-
 	// 写像の合成（引き戻し）
 	template<class PullbackDomain>
 	Mapping<PullbackDomain, Codomain> Compose(Mapping<PullbackDomain, Domain> pullbackMapping) {
