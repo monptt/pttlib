@@ -26,4 +26,5 @@ private:
 
 public:
 	static RealNumber Sqrt(RealNumber x);
+	static RealNumber Power(RealNumber x, int n);
 };

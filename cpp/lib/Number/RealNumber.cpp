@@ -50,3 +50,12 @@ RealNumber RealNumber::Sqrt(RealNumber x)
 {
 	return sqrt(x.value);
 }
+
+RealNumber RealNumber::Power(RealNumber x, int n)
+{
+	RealNumber ret = 1;
+	for (int i = 0; i < n; i++) {
+		ret = ret * x;
+	}
+	return ret;
+}
