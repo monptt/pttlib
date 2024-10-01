@@ -9,14 +9,9 @@
 #include "lib/Set/Set.h"
 
 int main(int argc, char* argv[]) {
-	Polynomial p1 = { 1, 2, 3 };
-	Polynomial p2 = { 4, 5, 6 };
-	std::cout << p1(1).ToString() << std::endl;
-	std::cout << p2.ToString() << std::endl;
-
-	Set set = Set();
-	set.Append(new ComplexNumber(1, 2));
-	set.Append(new Set());
-	std::cout << set.ToString() << std::endl;
+	for (int i = 0; i < 10; i++) {
+		Set set = Set(i);
+		std::cout << set.ToString() << std::endl;
+	}
 	return 0;
 }

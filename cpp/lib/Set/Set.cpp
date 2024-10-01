@@ -1,5 +1,12 @@
 #include "Set.h"
 
+Set::Set(int n)
+{
+	for (int i = 0; i < n; i++) {
+		this->Append(new Set(i));
+	}
+}
+
 void Set::Append(Class* element)
 {
 	elements.push_back(element);
