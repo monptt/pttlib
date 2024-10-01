@@ -32,7 +32,7 @@ protected:
 	/// </summary>
 	/// <param name="x">ˆø”</param>
 	/// <returns></returns>
-	virtual Codomain Map(Domain x) const = 0;
+	virtual Codomain Map(const Domain& x) const = 0;
 
 	// Ê‘œ‚Ì‡¬iˆø‚«–ß‚µj
 	template<class PullbackDomain>

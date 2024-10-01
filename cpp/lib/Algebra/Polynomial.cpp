@@ -23,7 +23,7 @@ std::string Polynomial::ToString() const
 	return str;
 }
 
-RealNumber Polynomial::Map(RealNumber x) const
+RealNumber Polynomial::Map(const RealNumber& x) const
 {
 	RealNumber ret = 0;
 	for (int i = 0; i < coefficients.size(); ++i) {
