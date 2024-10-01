@@ -99,6 +99,12 @@
     <ClInclude Include="lib\Algebra\Mapping\Multiplication.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="lib\Algebra\Mapping\Subtraction.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Algebra\Mapping\Division.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="cpp.rc">
@@ -188,6 +194,12 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="lib\Algebra\Mapping\Multiplication.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Algebra\Mapping\Subtraction.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Algebra\Mapping\Division.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

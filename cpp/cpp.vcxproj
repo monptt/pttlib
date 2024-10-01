@@ -133,8 +133,10 @@
     <ClInclude Include="lib\Algebra\Mapping\BinaryOperation.h" />
     <ClInclude Include="lib\Algebra\Group.h" />
     <ClInclude Include="lib\Algebra\Magma.h" />
+    <ClInclude Include="lib\Algebra\Mapping\Division.h" />
     <ClInclude Include="lib\Algebra\Mapping\IdentityMapping.h" />
     <ClInclude Include="lib\Algebra\Mapping\Multiplication.h" />
+    <ClInclude Include="lib\Algebra\Mapping\Subtraction.h" />
     <ClInclude Include="lib\Algebra\Monoid.h" />
     <ClInclude Include="lib\Algebra\Pair.h" />
     <ClInclude Include="lib\Algebra\Polynomial.h" />
@@ -165,8 +167,10 @@
     <ClCompile Include="lib\Algebra\Mapping\Addition.cpp" />
     <ClCompile Include="lib\Algebra\Mapping\BinaryOperation.cpp" />
     <ClCompile Include="lib\Algebra\Group.cpp" />
+    <ClCompile Include="lib\Algebra\Mapping\Division.cpp" />
     <ClCompile Include="lib\Algebra\Mapping\IdentityMapping.cpp" />
     <ClCompile Include="lib\Algebra\Mapping\Multiplication.cpp" />
+    <ClCompile Include="lib\Algebra\Mapping\Subtraction.cpp" />
     <ClCompile Include="lib\Algebra\Monoid.cpp" />
     <ClCompile Include="lib\Algebra\Polynomial.cpp" />
     <ClCompile Include="lib\Class.cpp" />
