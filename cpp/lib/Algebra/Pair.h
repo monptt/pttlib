@@ -1,14 +1,22 @@
 #pragma once
 #include "../Class.h"
 
-template<class A, class B>
+template<class ClassA, class ClassB>
 class Pair :
 	public Class
 {
 public:
-	Pair(A a, B b) : first(a), second(b) {}
+	Pair(ClassA a, ClassB b) : first(a), second(b) {}
+
+	ClassA GetFirst() const {
+		return first;
+	}
+
+	ClassB GetSecond() const {
+		return second;
+	}
 
 protected:
-	A first;
-	B second;
+	ClassA first;
+	ClassB second;
 };

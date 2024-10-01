@@ -5,8 +5,10 @@
 class Magma : public Class
 {
 	Magma(BinaryOperation<Magma> operation);
-	virtual Magma operator*(const Magma& rhs) const = 0;
+	Magma operator*(const Magma& rhs) const {
+		return (*operation)(Pair<Magma, Magma>(*this, rhs));
+	};
 
 private:
-
+	BinaryOperation<Magma>* operation;
 };
