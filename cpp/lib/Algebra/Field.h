@@ -11,6 +11,10 @@ class Field :
 public:
 	Field(Addition<Ring> addition, Subtraction<Ring> subtraction, Multiplication<Ring> multiplication, Division<Field> division);
 
+	Field operator/(const Field& other) const {
+		return division.Operation(*this, other);
+	}
+
 private:
 	Division<Field> division;
 };

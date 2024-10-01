@@ -15,6 +15,10 @@ public:
 		return addition.Operation(*this, other);
 	}
 
+	Ring operator-(const Ring& other) const {
+		return subtraction.Operation(*this, other);
+	}
+
 	Ring operator*(const Ring& other) const {
 		return multiplication.Operation(*this, other);
 	}
