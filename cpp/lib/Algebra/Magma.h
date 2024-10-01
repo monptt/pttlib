@@ -6,7 +6,7 @@ class Magma : public Class
 {
 	Magma(BinaryOperation<Magma> operation);
 	Magma operator*(const Magma& rhs) const {
-		return (*operation)(Pair<Magma, Magma>(*this, rhs));
+		return (*operation)(*this, rhs);
 	};
 
 private:
